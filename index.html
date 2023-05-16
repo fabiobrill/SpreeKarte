@@ -51,14 +51,24 @@
             // Marker erstellen
             var brandenburgerTor = L.marker([52.5163, 13.3776]);
             var fernsehturm = L.marker([52.5208, 13.4095]);
+            var waterAbstraction = L.imageOverlay('water_abstraction.jpeg', [[51.86, 13.97]]);
+            var spreewald = L.marker([51.8742, 13.9672])
+
+            var photoImg = '<img src="water_abstraction.jpeg" height="200px" width="150px"/>';
 
             // Marker hinzufügen
             brandenburgerTor.addTo(meineKarte);
             fernsehturm.addTo(meineKarte);
-            
+            waterAbstraction.addTo(meineKarte);
+            spreewald.addTo(meineKarte);
+
             // Popups hinzufügen
             brandenburgerTor.bindPopup('Hier ist das Brandenburger Tor');
             fernsehturm.bindPopup('Der Fernsehturm hat Ohren');
+            spreewald.bindPopup(photoImg)
+            
+
+mymap.on('click', onMapClick);
 
             // Linien oder Polygone hinzufügen
             var spree = L.polyline([
