@@ -1,1 +1,86 @@
 This should be an empty website
+with a map template
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vorlage</title>
+        <!-- Leaflet einbinden -->
+        <link rel="stylesheet" href="leaflet/leaflet.css">
+        <script src="leaflet/leaflet.js"></script>
+
+        <!-- CSS im style-tag -->
+        <style>
+            #mapDIV {
+                height: 400px;
+                width: 400px;
+                border: 1px solid rgb(169, 8, 8);
+            }
+        </style>
+    </head>
+    <body>
+        Hallo FOSSGIS
+        <div id="mapDIV"></div>
+        <script>
+            var meineKarte = L.map('mapDIV', {
+                center: [52.5219, 13.4011],
+                zoom: 10
+            });
+
+            var hintergrund = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            });
+            
+            var Stamen_Watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+                attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                subdomains: 'abcd',
+                minZoom: 1,
+                maxZoom: 16,
+                ext: 'jpg'
+            });
+
+            //hintergrund.addTo(meineKarte);
+            Stamen_Watercolor.addTo(meineKarte);
+            // Marker erstellen
+            var brandenburgerTor = L.marker([52.5163, 13.3776]);
+            var fernsehturm = L.marker([52.5208, 13.4095]);
+
+            // Marker hinzufügen
+            brandenburgerTor.addTo(meineKarte);
+            fernsehturm.addTo(meineKarte);
+            
+            // Popups hinzufügen
+            brandenburgerTor.bindPopup('Hier ist das Brandenburger Tor');
+            fernsehturm.bindPopup('Der Fernsehturm hat Ohren');
+
+            // Linien oder Polygone hinzufügen
+            var spree = L.polyline([
+                [52.52251, 13.39195],
+                [52.52185, 13.39688]
+            ]);
+
+            var alex = L.polygon([
+                [52.51996, 13.40493],
+                [52.52229, 13.40956],
+                [52.52046, 13.41227],
+                [52.51829, 13.40753]
+            ]);
+            
+            alex.bindPopup('Alexanderplatz');
+
+            spree.addTo(meineKarte);
+            alex.addTo(meineKarte);
+
+            meineKarte.on('click', function(e){
+                var lat = e.latlng.lat;
+                var lon = e.latlng.lng;
+
+                console.log(lat, lon);
+            });
+
+        </script>
+    </body>
+</html>
