@@ -83,7 +83,7 @@ $(window).on('load', function() {
    * Loads the basemap and adds it to the map
    */
   function addBaseMap() {
-    var basemap = trySetting('_tileProvider', 'Stamen.TonerLite');
+    var basemap = trySetting('_tileProvider', 'OpenStreetMap.Mapnik'); //'Stamen.TonerLite');
     L.tileLayer.provider(basemap, {
       maxZoom: 18
     }).addTo(map);
@@ -108,7 +108,7 @@ $(window).on('load', function() {
     }
 
     // Load tiles
-    addBaseMap();
+    //addBaseMap();
 
     // Add zoom controls if needed
     if (getSetting('_zoomControls') !== 'off') {
