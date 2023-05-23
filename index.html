@@ -1,100 +1,73 @@
-
-<link rel="stylesheet" href="style.css" />
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vorlage</title>
-        <!-- Leaflet einbinden -->
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"/>
-        <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"></script>
-        <link rel="stylesheet" href="style.css" />
 
-        <!-- CSS im style-tag -->
-        <style>
-            #mapDIV {
-                height: 100%;
-            }
-            html, body {
-                height: 100%;
-                margin: 0;
-                padding:0;
-            }
-        </style>
-        <!-- Position the map and title with Cascading Style Sheet (CSS) -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <title>Leaflet Storymaps with Google Sheets Template</title>
 
-    </head>
-    <body>
-        <div id="mapDIV"></div>
-        <script>
-            var meineKarte = L.map('mapDIV', {
-                center: [51.86, 13.97],
-                zoom: 10
-            });
+  <!-- Load Leaflet CSS and JS-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
 
-            var hintergrund = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            });
-            
-            var Stamen_Watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
-                attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-                subdomains: 'abcd',
-                minZoom: 1,
-                maxZoom: 16,
-                ext: 'jpg'
-            });
+  <!-- Load Leaflet basemap providers -->
+  <script src="https://unpkg.com/leaflet-providers@1.10.2/leaflet-providers.js"></script>
 
-            hintergrund.addTo(meineKarte);
-            //Stamen_Watercolor.addTo(meineKarte);
-            // Marker erstellen
-            var brandenburgerTor = L.marker([52.5163, 13.3776]);
-            var fernsehturm = L.marker([52.5208, 13.4095]);
-            var waterAbstraction = L.imageOverlay('water_abstraction.jpeg', [[51.86, 13.97]]);
-            var spreewald = L.marker([51.8742, 13.9672])
+  <!-- Load jQuery  -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 
-            var photoImg = '<img src="water_abstraction.jpeg" height="200px" width="150px"/>';
+  <!-- Load PapaParse -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
 
-            // Marker hinzufügen
-            brandenburgerTor.addTo(meineKarte);
-            fernsehturm.addTo(meineKarte);
-            waterAbstraction.addTo(meineKarte);
-            spreewald.addTo(meineKarte);
+  <!-- Load Lightbox -->
+  <script src="scripts/lightbox/js/lightbox.js"></script>
+  <link rel="stylesheet" href="scripts/lightbox/css/lightbox.css" />
 
-            // Popups hinzufügen
-            brandenburgerTor.bindPopup('Hier ist das Brandenburger Tor');
-            fernsehturm.bindPopup('Der Fernsehturm hat Ohren');
-            spreewald.bindPopup(photoImg)
-            
+  <!-- Load Font-Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="markers/leaflet.extra-markers.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-desktop.css">
+  <link rel="stylesheet" href="css/loader.css">
+</head>
 
-mymap.on('click', onMapClick);
+<body>
 
-            // Linien oder Polygone hinzufügen
-            var spree = L.polyline([
-                [52.52251, 13.39195],
-                [52.52185, 13.39688]
-            ]);
+  <div id="title">
+    <div id="logo"></div>
+    <div id="header"></div>
+  </div>
 
-            var alex = L.polygon([
-                [52.51996, 13.40493],
-                [52.52229, 13.40956],
-                [52.52046, 13.41227],
-                [52.51829, 13.40753]
-            ]);
-            
-            alex.bindPopup('Alexanderplatz');
+  <div id="narration">
+    <div id="contents">
+      <div id="top"></div>
+    </div>
+  </div>
 
-            spree.addTo(meineKarte);
-            alex.addTo(meineKarte);
+  <div class="loader">Loading...</div>
+  <div id="map"></div>
 
-            meineKarte.on('click', function(e){
-                var lat = e.latlng.lat;
-                var lon = e.latlng.lng;
+  <script type="text/javascript">
+    // Create the Leaflet map with a generic start point
+    var map = L.map('map', {
+      center: [0, 0],
+      zoom: 1,
+      scrollWheelZoom: false,
+      zoomControl: false,
+      tap: false
+    });
+  </script>
 
-                console.log(lat, lon);
-            });
+  <script type="text/javascript" src="google-doc-url.js"></script>
+  <script type="text/javascript" src="markers/leaflet.extra-markers.min.js"></script>
+  <script type="text/javascript" src="scripts/constants.js"></script>
+  <script type="text/javascript" src="scripts/jquery.csv.js"></script>
+  <script type="text/javascript" src="scripts/storymap.js"></script>
 
-        </script>
-    </body>
+</body>
 </html>
