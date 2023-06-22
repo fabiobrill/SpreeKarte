@@ -1,19 +1,12 @@
 # SpreeKarte
 
-mapping attempts within the transdisciplinary research project [CliWaC](https://www.cliwac.de/)
-
-
-# Template by HandsOnDataViz: Leaflet Storymaps with Google Sheets
-
-<p align="center">
-  <img src="./leaflet-storymaps-demo.gif" title="Storymaps demo" width="100%" />
-</p>
+mapping attempts within the transdisciplinary research project [CliWaC](https://www.cliwac.de/). Using a Template by HandsOnDataViz: Leaflet Storymaps with Google Sheets
 
 ## Live link
 - fabiobrill.github.io/SpreeKarte/
 
 ## Credits (and licenses) of the storymap template
-Developed by [Ilya Ilyankou](https://github.com/ilyankou) and [Jack Dougherty](https://github.com/jackdougherty) with support from Connecticut Humanities and Trinity College, CT. Inspired by Code for Atlanta mapsfor.us (2016) https://github.com/codeforatlanta/mapsforus (BSD-3-Clause). Adapted from MUX Lab, Map Effects 100: https://github.com/muxlab/map-effects-100, see http://muxlab.github.io/map-effects-100/Leaflet/11_scroll-driven-map-navigation.html.
+Template developed by [Ilya Ilyankou](https://github.com/ilyankou) and [Jack Dougherty](https://github.com/jackdougherty) with support from Connecticut Humanities and Trinity College, CT. Inspired by Code for Atlanta mapsfor.us (2016) https://github.com/codeforatlanta/mapsforus (BSD-3-Clause). Adapted from MUX Lab, Map Effects 100: https://github.com/muxlab/map-effects-100, see http://muxlab.github.io/map-effects-100/Leaflet/11_scroll-driven-map-navigation.html.
 
 We use [Google Sheets API version 4](https://developers.google.com/sheets/api), with these open-source components:
 
