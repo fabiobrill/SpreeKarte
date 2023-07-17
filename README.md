@@ -9,8 +9,7 @@ The story follows the river Spree from its source to the confluence with the Hav
 
 ## Data credits
 - Media: AnthropoScenes, based on material by Gerd Conrad
-- River shapes: Landesamt für Umwelt (LfU) Brandenburg
-- Background: OpenStreetMap Contributors
+- River shapes and background: OpenStreetMap Contributors
 
 ## Credits and licenses of the storymap template
 Template developed by [Ilya Ilyankou](https://github.com/ilyankou) and [Jack Dougherty](https://github.com/jackdougherty) with support from Connecticut Humanities and Trinity College, CT. Inspired by Code for Atlanta mapsfor.us (2016) https://github.com/codeforatlanta/mapsforus (BSD-3-Clause). Adapted from MUX Lab, Map Effects 100: https://github.com/muxlab/map-effects-100, see http://muxlab.github.io/map-effects-100/Leaflet/11_scroll-driven-map-navigation.html.
