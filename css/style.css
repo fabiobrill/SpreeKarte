@@ -1,7 +1,7 @@
 body {
   padding: 0px;
   margin: 0px;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Bahnschrift", sans-serif;
   overflow: hidden;
 }
 
@@ -113,7 +113,9 @@ a.source:visited {
 
 .description {
   margin: 20px;
-  text-align: left;
+  font-family: "Bahnschrift";
+  text-align: justify;
+  text-justify: inter-word;
   font-size: 11pt;
   padding: 20px;
 }

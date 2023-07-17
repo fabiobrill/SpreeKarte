@@ -402,14 +402,14 @@ $(window).on('load', function() {
       .prop("type", "text/css")
       .html("\
       #narration, #title {\
-        background-color: " + trySetting('_narrativeBackground', 'white') + "; \
-        color: " + trySetting('_narrativeText', 'black') + "; \
+        background-color: " + trySetting('_narrativeBackground', '#282141') + "; \
+        color: " + trySetting('_narrativeText', 'white') + "; \
       }\
       a, a:visited, a:hover {\
-        color: " + trySetting('_narrativeLink', 'blue') + " \
+        color: " + trySetting('_narrativeLink', 'crimson') + " \
       }\
       .in-focus {\
-        background-color: " + trySetting('_narrativeActive', '#f0f0f0') + " \
+        background-color: " + trySetting('_narrativeActive', '#282141') + " \
       }")
       .appendTo("head");
 
