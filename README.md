@@ -2,7 +2,7 @@
 
 Storymap created within the transdisciplinary research project [CliWaC](https://www.cliwac.de/) for a [Blog post by Desirée Hetzel et al.](https://umweltethnologie.com/blog/).
 
-The story follows the river Spree from its source to the confluence with the Havel, highlighting aspects mentioned in the movide [„Die Spree – Sinfonie eines Flusses“](http://www.gerdconradt.de/videofilme/v28_spree.htm) by [Gerd Conrad](https://de.wikipedia.org/wiki/Gerd_Conradt). Material edited by [AnthropoScenes](https://www.anthroposcenes.de/). Map/Code based on Template by [HandsOnDataViz](https://handsondataviz.org/): [Leaflet Strymaps with Google Sheets](https://handsondataviz.org/leaflet-storymaps-with-google-sheets.html)
+The story follows the river Spree from its source to the confluence with the Havel, highlighting aspects mentioned in the movie [„Die Spree – Sinfonie eines Flusses“](http://www.gerdconradt.de/videofilme/v28_spree.htm) by [Gerd Conrad](https://de.wikipedia.org/wiki/Gerd_Conradt). Material edited by [AnthropoScenes](https://www.anthroposcenes.de/). Map/Code based on Template by [HandsOnDataViz](https://handsondataviz.org/): [Leaflet Strymaps with Google Sheets](https://handsondataviz.org/leaflet-storymaps-with-google-sheets.html)
 
 ## Live link
 - https://fabiobrill.github.io/SpreeKarte/
