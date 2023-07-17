@@ -1,11 +1,16 @@
-# SpreeKarte
+# Flusspunkte entlang der Spree
 
-mapping attempts within the transdisciplinary research project [CliWaC](https://www.cliwac.de/). Using a Template by HandsOnDataViz: Leaflet Storymaps with Google Sheets
+Storymap created within the transdisciplinary research project [CliWaC](https://www.cliwac.de/) for a [Blog post by Desirée Hetzel et al.](https://umweltethnologie.com/blog/).
+
+The story follows the river Spree from its source to the confluence with the Havel, highlighting aspects mentioned in the movide [„Die Spree – Sinfonie eines Flusses“](http://www.gerdconradt.de/videofilme/v28_spree.htm) by [Gerd Conrad](https://de.wikipedia.org/wiki/Gerd_Conradt). Material edited by [AnthropoScenes](https://www.anthroposcenes.de/). Map/Code based on Template by [HandsOnDataViz](https://handsondataviz.org/): [Leaflet Strymaps with Google Sheets](https://handsondataviz.org/leaflet-storymaps-with-google-sheets.html)
 
 ## Live link
-- fabiobrill.github.io/SpreeKarte/
+- https://fabiobrill.github.io/SpreeKarte/
 
-## Credits (and licenses) of the storymap template
+## Data credits
+
+
+## Credits and licenses of the storymap template
 Template developed by [Ilya Ilyankou](https://github.com/ilyankou) and [Jack Dougherty](https://github.com/jackdougherty) with support from Connecticut Humanities and Trinity College, CT. Inspired by Code for Atlanta mapsfor.us (2016) https://github.com/codeforatlanta/mapsforus (BSD-3-Clause). Adapted from MUX Lab, Map Effects 100: https://github.com/muxlab/map-effects-100, see http://muxlab.github.io/map-effects-100/Leaflet/11_scroll-driven-map-navigation.html.
 
 We use [Google Sheets API version 4](https://developers.google.com/sheets/api), with these open-source components:
