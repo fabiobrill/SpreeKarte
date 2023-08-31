@@ -477,7 +477,7 @@ $(window).on('load', function() {
       // Show Google Sheet URL if the variable exists and is not empty, otherwise link to Chapters.csv
       //  + (typeof googleDocURL !== 'undefined' && googleDocURL ? googleDocURL : './csv/Chapters.csv')
       //  + '" target="_blank">Blog</a>';
-    var credit = 'View <a href="https://umweltethnologie.com/blog/" target="_blank">Blog</a>';
+    var credit = 'View <a href="https://umweltethnologie.com/2023/08/28/flusspunkte-entlang-der-spree/" target="_blank">Blog</a>';
     var name = getSetting('_authorName');
     var url = getSetting('_authorURL');
 
